@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Travis Phillips, Musician</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      display: flex;
+      min-height: 100vh;
+      margin: 0;
+      padding: 1rem;
+      padding-bottom: 0;
+      background-color: #99E2D0;
+      font-family: Montserrat;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1 {
+      margin: 0;
+      font-weight: 800;
+      font-size: 2.5rem;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    a {
+      color: #35564e;
+    }
+
+    a:hover {
+      color: #0f5d49;
+    }
+
+    p {
+      margin-bottom: 0;
+      font-size: 1.125rem;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    main {
+      display: grid;
+      align-self: flex-end;
+        align-items: center;
+    }
+
+    @media (min-width: 800px) {
+      main {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: end;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+    }
+
+    .main-content {
+      align-self: center;
+      justify-self: center;
+      text-align: center;
+    }
+
+    @media (min-width: 800px) {
+      .main-content {
+        justify-self: flex-end;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="main-content">
+      <h1>Travis Phillips</h1>
+      <p>Guitarist & Musician</p>
+      <p><a href="mailto:travis.phillips.musician@gmail.com">travis.phillips.musician@gmail.com</a></p>
+    </div>
+
+    <div class="main-image">
+      <img src="/img/travis.jpg" alt="Travis Phillips playing guitar">
+    </div>
+  </main>
+</body>
+
+</html>
