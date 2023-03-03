@@ -7,3 +7,5 @@ node_modules/
 
 # Ignore eleventy output when doing manual tests
 _site/
+
+.cache
