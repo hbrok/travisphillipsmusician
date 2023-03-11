@@ -16,8 +16,26 @@ layout: base.html
 	</div>
 </header>
 
-<main id="skip" class="container">
+<main id="skip">
 	<article>
-		{{ content }}
+		{% if content %}
+			<section>
+				<div class="container">
+					{{ content }}
+				</div>
+			</section>
+		{% endif %}
+
+		{% for post in collections.all %}
+			{% if post.data.summary %}
+				<section>
+					<div class="container">
+						<h2>{{ post.data.title }}</h2>
+						<p>{{ post.data.summary }}</p>
+						<a href="{{ post.url }}" class="button">{{ post.data.title }}</a>
+					</div>
+				</section>
+			{% endif %}
+	  	{% endfor %}
 	</article>
 </main>
