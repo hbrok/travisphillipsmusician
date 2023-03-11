@@ -10,8 +10,24 @@ layout: base.html
 		
 		<img class="home-header--image" src="/assets/img/travis.jpg" alt="Travis Phillips playing guitar">
 
-		<nav class="home-header--nav">
-			{{ collections.all | eleventyNavigation | eleventyNavigationToHtml }}
+		<nav class="home-header--nav" aria-label="main">
+			<ul>
+				{% for item in navigation.items %}
+					<li><a href="{{ item.url }}">{{ item.text }}</a></li>
+				{% endfor %}
+			</ul>
+		</nav>
+
+		<nav class="home-header--social" aria-label="social">
+			<ul>
+				{% for item in metadata.social %}
+					<li>
+						<a href="{{ item.url }}" aria-label="{{ item.label }}">
+							<img src="/assets/img/{{ item.slug }}.svg" alt="">
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
 		</nav>
 	</div>
 </header>
@@ -32,6 +48,14 @@ layout: base.html
 					<div class="container">
 						<h2>{{ post.data.title }}</h2>
 						<p>{{ post.data.summary }}</p>
+						
+
+						{% if post.data.title == 'Events' %}
+							{% for post in collections.event %}
+								{% include "./partials/event.html" %}
+							{% endfor %}
+						{% endif %}
+
 						<a href="{{ post.url }}" class="button">{{ post.data.title }}</a>
 					</div>
 				</section>

@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "text": "About",
+      "url": "/about"
+    },
+    {
+      "text": "Music & Videos",
+      "url": "/media"
+    },
+    {
+      "text": "Events",
+      "url": "/events"
+    },
+    {
+      "text": "Contact",
+      "url": "/contact"
+    }
+  ]
+}

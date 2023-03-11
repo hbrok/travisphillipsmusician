@@ -9,10 +9,9 @@ module.exports = function(eleventyConfig) {
   
   eleventyConfig.setLibrary('md', markdownIt.use(require('markdown-it-attrs')));
 
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);
-
   // Copy anything in assets
   eleventyConfig.addPassthroughCopy('assets');
+  eleventyConfig.addPassthroughCopy('admin');
 
   // Don't watch .gitignore
   // git ignores compiled CSS, but lets 11ty recompile on changes to CSS file

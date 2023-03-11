@@ -1,0 +1,29 @@
+<header>
+    <div class="site-header--inner">
+        <a class="site-title" href="{{ metadata.url }}">Travis P</a>
+
+        <nav aria-label="main">
+            <ul>
+                {% for item in navigation.items %}
+                    <li><a href="{{ item.url }}">{{ item.text }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+
+		<nav class="home-header--social" aria-label="social">
+			<ul>
+				{% for item in metadata.social %}
+					<li>
+						<a href="{{ item.url }}" aria-label="{{ item.label }}">
+							<img src="/assets/img/{{ item.slug }}.svg" alt="">
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</nav>
+    </div>
+
+    <div class="site-hero">
+        <img src="/assets/img/hero.jpg" alt="">
+    </div>
+</header>

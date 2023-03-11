@@ -7,5 +7,9 @@ layout: base.html
     <article>
         <h1>{{ title }}</h1>
 	    {{ content }}
+
+		{% for post in collections.event %}
+			{% include "./partials/header.html" %}
+		{% endfor %}
     </article>
 </main>

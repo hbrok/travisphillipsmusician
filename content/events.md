@@ -1,6 +1,6 @@
 ---
-layout: home.html
-title: Homepage
+layout: events.html
+title: Events
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
 ---
 

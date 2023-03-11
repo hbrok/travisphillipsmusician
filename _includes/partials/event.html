@@ -1,0 +1,12 @@
+<div class="event">
+    <div class="event-moday">
+        <div class="event-moday--month">{{ post.data.date | date: "%b" }}</div>
+        <div class="event-moday--day">{{ post.data.date | date: "%e"  }}</div>
+    </div>
+
+    <div>
+        <strong>{{ post.data.date | date: "%A, %B %e" }}{% if post.data.time %} @ {{ post.data.time }}{% endif %}</strong><br>
+        <a href="{{ post.data.venue_url }}">{{ post.data.venue }}</a><br>
+        {{ post.data.location }}
+    </div>
+</div>

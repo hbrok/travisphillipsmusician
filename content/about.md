@@ -1,7 +1,5 @@
 ---
 layout: page.html
-eleventyNavigation:
-  key: About
 title: About
 summary: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 ---

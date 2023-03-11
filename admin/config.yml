@@ -1,0 +1,71 @@
+backend:
+  name: git-gateway
+  branch: master
+media_folder: assets/img/uploads
+
+# Run npx netlify-cms-proxy-server for local backend
+local_backend: true
+collections:
+  - label: Pages
+    name: page
+    folder: content
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Summary, name: summary, hint: This text will display on the homepage. Leave blank to remove this page from the homepage., required: false, widget: string }
+      - { label: Body, name: body, widget: markdown }
+  - label: Event
+    name: event
+    identifier_field: venue
+    slug: "{{slug}}-{{month}}-{{day}}-{{year}}"
+    folder: content/events
+    create: true
+    editor:
+      preview: false
+    summary: "{{fields.venue}} - {{month}}-{{day}}-{{year}}"
+    fields:
+      - label: Date
+        name: date
+        widget: date
+        date_format: YYYY-MM-DD
+        format: YYYY-MM-DD
+        picker_utc: false
+      - { label: Time, name: time, hint: "Ex: 6:30 PM", required: false, widget: string }
+      - { label: Venue, name: venue, widget: string }
+      - { label: Venue URL, name: venue_url, widget: string }
+      - { label: Location, name: location, hint: "Ex: Madison, WI", widget: string }
+  - label: Settings
+    name: settings
+    editor:
+      preview: false
+    files:
+    - label: Navigation
+      name: items
+      file: _data/navigation.json
+      fields:
+        - label: Menu Items
+          name: items
+          widget: list
+          allow_add: true
+          collapsed: false
+          fields:
+            - { label: Title, name: text, widget: string }
+            - { label: URL, name: url, widget: string }
+    - label: Metadata
+      name: settings
+      file: _data/metadata.json
+      fields:
+        - { label: Title, name: title, widget: string }
+        - { label: URL, name: url, widget: string }
+        - { label: Email, name: email, widget: string }
+        - label: Social
+          name: social
+          widget: list
+          allow_add: true
+          collapsed: false
+          fields:
+            - { label: Label, name: label, widget: string }
+            - { label: Slug, name: slug, widget: string }
+            - { label: URL, name: url, widget: string }
