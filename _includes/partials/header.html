@@ -12,12 +12,12 @@
 
 		<nav class="home-header--social" aria-label="social">
 			<ul>
-				{% for item in metadata.social %}
-					<li>
-						<a href="{{ item.url }}" aria-label="{{ item.label }}">
-							<img src="/assets/img/{{ item.slug }}.svg" alt="">
-						</a>
-					</li>
+				{% for item in metadata.social if item.url %}
+                    <li>
+                        <a href="{{ item.url }}" aria-label="{{ item.label }}">
+                            <img src="/assets/img/{{ item.slug }}.svg" alt="">
+                        </a>
+                    </li>
 				{% endfor %}
 			</ul>
 		</nav>

@@ -4,21 +4,5 @@
   "language": "en",
   "description": "",
   "email": "travisphillipsmusician@gmail.com",
-  "social": [
-    {
-		"label": "Instagram",
-		"slug": "instagram",
-		"url": "https://www.instagram.com"
-	},
-	{
-		"label": "Facebook",
-		"slug": "facebook",
-		"url": "https://www.facebook.com"
-	},
-	{
-		"label": "Soundcloud",
-		"slug": "soundcloud",
-		"url": "https://www.soundcloud.com"
-	}
-  ]
+  "social": []
 }
