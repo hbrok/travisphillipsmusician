@@ -15,8 +15,10 @@
 	</head>
     
 	<body>
-		<main id="skip">
-			{{ content }}
-		</main>
+		{{ content }}
+
+		<footer>
+			<p>&copy; {{ "now" | date: "%Y" }} Travis Phillips</p>
+		</footer>
 	</body>
 </html>

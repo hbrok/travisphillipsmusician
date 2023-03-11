@@ -1,14 +1,23 @@
 ---
 layout: base.html
 ---
-<div class="main-content">
-	<h1>Travis Phillips</h1>
-	<p>Guitarist & Musician</p>
-	<p><a href="mailto:{{ metadata.author.email }}">{{ metadata.author.email }}</a></p>
-	{{ content }}
-  </div>
+<header>
+	<div class="home-header--inner">
+		<div class="home-header--title">
+			<h1>Travis P</h1>
+			<p>Guitarist & Musician</p>
+		</div>
+		
+		<img class="home-header--image" src="/assets/img/travis.jpg" alt="Travis Phillips playing guitar">
 
-  <div class="main-image">
-	<img src="/assets/img/travis.jpg" alt="Travis Phillips playing guitar">
-  </div>
-</div>
+		<nav class="home-header--nav">
+			{{ collections.all | eleventyNavigation | eleventyNavigationToHtml }}
+		</nav>
+	</div>
+</header>
+
+<main id="skip" class="container">
+	<article>
+		{{ content }}
+	</article>
+</main>

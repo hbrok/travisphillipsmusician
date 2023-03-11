@@ -1,0 +1,19 @@
+---
+layout: base.html
+---
+<header>
+    <div class="site-header--inner">
+        <a class="site-title" href="{{ metadata.url }}">Travis P</a>
+        <nav>{{ collections.all | eleventyNavigation | eleventyNavigationToHtml }}</nav>
+    </div>
+
+    <div class="site-hero">
+        <img src="/assets/img/hero.jpg" alt="">
+    </div>
+</header>
+
+<main id="skip" class="container">
+    <article>
+	    {{ content }}
+    </article>
+</main>
