@@ -23,7 +23,9 @@
 		</nav>
     </div>
 
-    <div class="site-hero">
-        <img src="/assets/img/hero.jpg" alt="">
-    </div>
+    {% if hero %}
+        <div class="site-hero">
+            <img src="{{ hero }}" alt="">
+        </div>
+    {% endif %}
 </header>
