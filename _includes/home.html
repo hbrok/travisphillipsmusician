@@ -23,7 +23,7 @@ layout: base.html
 				{% for item in metadata.social %}
 					<li>
 						<a href="{{ item.url }}" aria-label="{{ item.label }}">
-							<img src="/assets/img/{{ item.slug }}.svg" alt="">
+							{{ icons[item.slug] }}
 						</a>
 					</li>
 				{% endfor %}
