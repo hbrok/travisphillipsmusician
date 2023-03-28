@@ -15,7 +15,7 @@ collections:
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Summary, name: summary, hint: This text will display on the homepage. Leave blank to remove this page from the homepage., required: false, widget: string }
-      - { label: Hero Image, name: hero, widget: image, choose_url: false, hint: Resize to 1800 x 400. }
+      - { label: Hero Image, name: hero, widget: image, required: false, choose_url: false, hint: Resize to 1800 x 400. }
       - { label: Body, name: body, widget: markdown }
   - label: Event
     name: event
